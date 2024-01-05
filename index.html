@@ -22,13 +22,18 @@
   </head>
   <body>
     <div id="app">
-      <button :class="buttonClasses">Click Me</button>
+      <button :class="buttonClasses" v-on:click="toggle">Click Me</button>
     </div>
     <script>
       Vue.createApp({
         data() {
           return {
             buttonClasses: 'text-green'
+          }
+        },
+        methods: {
+          toggle() {
+            alert('toggle')
           }
         }
       }).mount('#app');
