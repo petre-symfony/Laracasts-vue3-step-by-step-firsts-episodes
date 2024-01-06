@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     tags() {
-      return this.assignments.map(a => a.tag);
+      return new Set(this.assignments.map(a => a.tag));
     }
   }
 }
