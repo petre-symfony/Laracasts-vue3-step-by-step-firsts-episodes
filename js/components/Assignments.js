@@ -8,7 +8,7 @@ export default {
       <assignments-list :assignments="filters.inProgress" title="In Progress"></assignments-list>
       <assignments-list :assignments="filters.completed" title="Completed"></assignments-list>
       
-      <form @submit="add">
+      <form @submit.prevent="add">
         <div class="border border-gray-600 text-black">
           <input placeholder="New assignment..." class="p-2">
           <button type="submit" class="bg-white p-2 border-l">Add</button>
@@ -34,8 +34,7 @@ export default {
     }
   },
   methods: {
-    add(e) {
-      e.preventDefault();
+    add() {
       alert('hi there')
     }
   }
