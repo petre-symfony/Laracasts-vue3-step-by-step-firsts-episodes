@@ -34,7 +34,8 @@ export default {
     }
   },
   methods: {
-    add() {
+    add(e) {
+      e.preventDefault();
       alert('hi there')
     }
   }
