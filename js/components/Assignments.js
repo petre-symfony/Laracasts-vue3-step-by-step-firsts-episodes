@@ -11,7 +11,7 @@ export default {
       <assignments-list :assignments="filters.inProgress" title="In Progress"></assignments-list>
       <assignments-list :assignments="filters.completed" title="Completed"></assignments-list>
       
-      <assignment-create :assignments="assignments"/>
+      <assignment-create @add="add"/>
     </section>
   `,
   data() {
@@ -32,9 +32,9 @@ export default {
     }
   },
   methods: {
-    add() {
+    add(name) {
       this.assignments.push({
-        name: this.newAssignment,
+        name: name,
         complete: false,
         id: this.assignments.length + 1
       });
