@@ -5,7 +5,11 @@ export default {
     Assignment
   },
   template: `<section v-show="assignments.length" class="mt-8">
-      <h2 class="font-bold mb-5">{{ title }}</h2>
+      <h2 class="font-bold mb-5">
+        {{ title }}
+        <span>({{ assignments.length }})</span>
+      </h2>
+      
     
       <ul class="border border-gray-600 divide-y divide-gray-600">
         <assignment 
