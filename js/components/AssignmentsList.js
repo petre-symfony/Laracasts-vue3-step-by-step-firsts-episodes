@@ -29,7 +29,7 @@ export default {
   },
   computed: {
     tags() {
-      return ['science', 'math', 'reading']
+      return this.assignments.map(a => a.tag);
     }
   }
 }
