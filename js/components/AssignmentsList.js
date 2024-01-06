@@ -22,7 +22,7 @@ export default {
       
       <ul class="border border-gray-600 divide-y divide-gray-600 mt-6">
         <assignment 
-          v-for="assignment in assignments" 
+          v-for="assignment in filteredAssignments" 
           :key="assignment.id"
           :assignment="assignment"
         />
@@ -41,6 +41,9 @@ export default {
   computed: {
     tags() {
       return new Set(this.assignments.map(a => a.tag));
+    },
+    filteredAssignments() {
+      return this.assignments.filter(a => a.tag === this.currentTag)
     }
   }
 }
