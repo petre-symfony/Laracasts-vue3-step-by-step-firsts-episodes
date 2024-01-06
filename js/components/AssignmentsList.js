@@ -11,7 +11,13 @@ export default {
       </h2>
       
       <div class="flex gap-2">
-        <button v-for="tag in tags" class="rounded border px-1 py-1 text-xs">{{ tag }}</button>
+        <button 
+            @click="currentTag = tag"
+            v-for="tag in tags" 
+            class="rounded border px-1 py-1 text-xs"
+          >
+          {{ tag }}
+        </button>
       </div>
       
       <ul class="border border-gray-600 divide-y divide-gray-600 mt-6">
@@ -23,6 +29,11 @@ export default {
       </ul>
     </section>
   `,
+  data() {
+    return {
+      currentTag: ''
+    }
+  },
   props: {
     assignments: Array,
     title: String
