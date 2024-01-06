@@ -4,6 +4,12 @@ export default {
       <slot></slot>
     </button>
   `,
+  props: {
+    type: {
+      type: String,
+      default: 'primary'
+    }
+  },
   data() {
     return {
       processing: false
