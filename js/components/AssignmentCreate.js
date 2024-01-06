@@ -10,9 +10,18 @@ export default {
       newAssignment: ''
     }
   },
+  props: {
+    assignments: Array
+  },
   methods: {
     add() {
-      alert('add');
+      this.assignments.push({
+        name: this.newAssignment,
+        complete: false,
+        id: this.assignments.length + 1
+      });
+
+      this.newAssignment = '';
     }
   }
 }
