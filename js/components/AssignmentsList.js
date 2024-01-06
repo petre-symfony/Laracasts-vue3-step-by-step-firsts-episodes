@@ -15,6 +15,9 @@ export default {
             @click="currentTag = tag"
             v-for="tag in tags" 
             class="rounded border px-1 py-1 text-xs"
+            :class="{
+              'border-blue-500 text-blue-500': tag === currentTag
+            }"
           >
           {{ tag }}
         </button>
