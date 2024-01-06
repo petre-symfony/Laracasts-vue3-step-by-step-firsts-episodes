@@ -12,7 +12,7 @@
         <h2 class="font-bold mb-5">In Progress</h2>
 
         <ul>
-          <li v-for="assignment in assignments.filter(a => !a.complete)">
+          <li v-for="assignment in assignments.filter(a => !a.complete)" :key="assignment.id">
             <label >
               {{ assignment.name }}
               <input type="checkbox" v-model="assignment.complete">
@@ -25,7 +25,7 @@
         <h2 class="font-bold mb-5">Completed</h2>
 
         <ul>
-          <li v-for="assignment in assignments.filter(a => a.complete)">
+          <li v-for="assignment in assignments.filter(a => a.complete)" :key="assignment.id">
             <label >
               {{ assignment.name }}
               <input type="checkbox" v-model="assignment.complete">
@@ -39,9 +39,9 @@
         data() {
           return {
             assignments: [
-              {name: 'Finish project', complete: false},
-              {name: 'Read chapter 4', complete: false},
-              {name: 'Turn in homework', complete: false}
+              {name: 'Finish project', complete: false, id: 1},
+              {name: 'Read chapter 4', complete: false, id: 2},
+              {name: 'Turn in homework', complete: false, id: 3}
             ]
           }
         }
