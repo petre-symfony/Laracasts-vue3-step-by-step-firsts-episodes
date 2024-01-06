@@ -41,6 +41,8 @@ export default {
         complete: false,
         id: this.assignments.length + 1
       });
+
+      this.newAssignment = '';
     }
   }
 }
