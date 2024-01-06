@@ -36,7 +36,11 @@ export default {
   },
   methods: {
     add() {
-      alert(this.newAssignment)
+      this.assignments.push({
+        name: this.newAssignment,
+        complete: false,
+        id: this.assignments.length + 1
+      });
     }
   }
 }
