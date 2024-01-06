@@ -8,14 +8,16 @@
   </head>
   <body class="h-full grid place-items-center">
     <div id="app">
-
+      <app-button></app-button>
     </div>
     <script>
       let app = {
         components: {
-          'app-button': {},
-          'assignments-list': {},
-          'assignments-list-item': {}
+          'app-button': {
+            mounted() {
+              alert('hello')
+            }
+          },
         }
       };
 
