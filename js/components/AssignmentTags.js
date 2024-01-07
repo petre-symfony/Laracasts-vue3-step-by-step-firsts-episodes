@@ -5,7 +5,7 @@ export default {
           v-for="tag in tags" 
           class="rounded border px-1 py-1 text-xs"
           :class="{
-            'border-blue-500 text-blue-500': tag === currentTag
+            'border-blue-500 text-blue-500': tag === modelValue
           }"
         >
         {{ tag }}
@@ -13,7 +13,7 @@ export default {
     </div>`,
   props: {
     initialTags: Array,
-    currentTag: String
+    modelValue: String
   },
   computed: {
     tags() {
