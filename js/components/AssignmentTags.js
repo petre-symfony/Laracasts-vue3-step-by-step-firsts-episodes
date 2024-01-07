@@ -12,7 +12,8 @@ export default {
       </button>
     </div>`,
   props: {
-    initialTags: Array
+    initialTags: Array,
+    currentTag: String
   },
   computed: {
     tags() {
