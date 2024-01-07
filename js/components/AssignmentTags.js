@@ -1,7 +1,7 @@
 export default {
   template: `<div class="flex gap-2">
       <button 
-          @click="currentTag = tag"
+          @click="$emit('change', tag)"
           v-for="tag in tags" 
           class="rounded border px-1 py-1 text-xs"
           :class="{
@@ -13,11 +13,6 @@ export default {
     </div>`,
   props: {
     initialTags: Array
-  },
-  data() {
-    return {
-      currentTag: 'all'
-    }
   },
   computed: {
     tags() {
