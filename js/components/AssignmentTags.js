@@ -12,11 +12,16 @@ export default {
       </button>
     </div>`,
   props: {
-    tags: Array
+    initialTags: Array
+  },
+  data() {
+    return {
+      currentTag: 'all'
+    }
   },
   computed: {
-    allTags() {
-      return ['all', ...new Set(this.tags)];
+    tags() {
+      return ['all', ...new Set(this.initialTags)];
     }
   }
 }
