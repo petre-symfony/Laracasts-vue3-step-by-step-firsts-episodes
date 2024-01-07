@@ -8,7 +8,7 @@
   </head>
   <body class="h-full grid place-items-center bg-gray-800">
     <div id="app">
-      <input type="text" :value="name" @input="name = $event.target.value">
+      <input type="text" v-model="name">
     </div>
     <script type="module">
 
