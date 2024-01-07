@@ -24,6 +24,7 @@ export default {
           :assignment="assignment"
         />
       </ul>
+      <slot></slot>
     </section>
   `,
   data() {
