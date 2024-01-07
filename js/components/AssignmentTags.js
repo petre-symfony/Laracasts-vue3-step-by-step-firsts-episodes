@@ -1,11 +1,11 @@
 export default {
   template: `<div class="flex gap-2">
       <button 
-          @click="$emit('update:modelValue', tag)"
+          @click="$emit('update:currentTag', tag)"
           v-for="tag in tags" 
           class="rounded border px-1 py-1 text-xs"
           :class="{
-            'border-blue-500 text-blue-500': tag === modelValue
+            'border-blue-500 text-blue-500': tag === currentTag
           }"
         >
         {{ tag }}
@@ -13,7 +13,7 @@ export default {
     </div>`,
   props: {
     initialTags: Array,
-    modelValue: String
+    currentTag: String
   },
   computed: {
     tags() {
