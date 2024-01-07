@@ -13,7 +13,7 @@ export default {
           <span>({{ assignments.length }})</span>
         </h2>
         
-        <button>&times;</button>
+        <button v-show="canHide">&times;</button>
       </div>
       
       <assignment-tags 
@@ -38,7 +38,8 @@ export default {
   },
   props: {
     assignments: Array,
-    title: String
+    title: String,
+    canHide: { type: Boolean, default: false }
   },
   computed: {
     filteredAssignments() {
