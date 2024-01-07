@@ -15,8 +15,8 @@ export default {
     tags: Array
   },
   computed: {
-    tags() {
-      return ['all', ...new Set(this.assignments.map(a => a.tag))];
+    allTags() {
+      return ['all', ...new Set(this.tags)];
     }
   }
 }
