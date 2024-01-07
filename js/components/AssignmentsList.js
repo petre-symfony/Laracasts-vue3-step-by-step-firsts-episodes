@@ -6,7 +6,7 @@ export default {
     Assignment,
     AssignmentTags
   },
-  template: `<section v-show="assignments.length" class="mt-8">
+  template: `<section v-show="assignments.length" class="w-60">
       <h2 class="font-bold mb-5">
         {{ title }}
         <span>({{ assignments.length }})</span>
