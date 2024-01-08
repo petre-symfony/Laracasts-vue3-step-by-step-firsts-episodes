@@ -10,7 +10,9 @@ export default {
     <div class="grid gap-6">
       <Assignments />
       
-      <Panel>Hello Again</Panel>
+      <Panel>
+        This is my default content
+      </Panel>
     </div>
   `
 }
