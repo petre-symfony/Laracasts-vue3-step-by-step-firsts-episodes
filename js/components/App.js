@@ -15,12 +15,24 @@ export default {
       </Panel>
       
       <Panel>
-         <template v-slot:heading>
+        <template v-slot:heading>
           Hi there
         </template>
         
         This is my default content
         
+      </Panel>
+      
+      <Panel>
+        <template v-slot:heading>
+          Hi there
+        </template>
+        
+        This is my default content
+        
+        <template v-slot:footer>
+          Click here to learn more
+        </template>
       </Panel>
     </div>
   `

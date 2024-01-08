@@ -6,6 +6,10 @@ export default {
       </h2>
       
       <slot/>
+      
+      <footer v-if="$slots.footer">
+        <slot name="footer"></slot>
+      </footer>
     </div>
   `,
   props: {
