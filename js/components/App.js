@@ -9,43 +9,6 @@ export default {
   template: `
     <div class="grid gap-6">
       <Assignments />
-      
-      <Panel> 
-        This is my default content
-      </Panel>
-      
-      <Panel>
-        <template v-slot:heading>
-          Hi there
-        </template>
-        
-        This is my default content
-        
-      </Panel>
-      
-      <Panel>
-        <template v-slot:heading>
-          Hi there
-        </template>
-        
-        This is my default content
-        
-        <template v-slot:footer>
-          Click here to learn more
-        </template>
-      </Panel>
-      
-      <Panel theme="light">
-        <template v-slot:heading>
-          Hi there
-        </template>
-        
-        This is my default content
-        
-        <template v-slot:footer>
-          Click here to learn more
-        </template>
-      </Panel>
     </div>
   `
 }
