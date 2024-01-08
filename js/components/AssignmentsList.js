@@ -30,8 +30,9 @@ export default {
           />
         </ul>
         <slot></slot>
-      </section>
-    </div>
+      </div>
+    </section>
+    
   `,
   data() {
     return {
