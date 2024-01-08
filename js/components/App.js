@@ -11,7 +11,9 @@ export default {
       <Assignments />
       
       <Panel>
-        This is my default content
+        <template v-slot:default>
+          This is my default content
+        </template>
       </Panel>
     </div>
   `
