@@ -14,9 +14,9 @@ export default {
          <template v-slot:heading>
           Hi there
         </template>
-        <template v-slot:default>
-          This is my default content
-        </template>
+        
+        This is my default content
+        
       </Panel>
     </div>
   `
