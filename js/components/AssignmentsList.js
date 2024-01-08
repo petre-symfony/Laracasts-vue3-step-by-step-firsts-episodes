@@ -8,7 +8,7 @@ export default {
     AssignmentTags,
     Panel
   },
-  template: `<Panel v-show="assignments.length" id="my-panel">
+  template: `<Panel v-show="assignments.length">
       <div class="w-60">
         <div class="flex justify-between items-start">
           <h2 class="font-bold mb-5">
@@ -33,6 +33,10 @@ export default {
         </ul>
         <slot></slot>
       </div>
+      
+      <template v-slot:footer>
+        my footer goes here
+      </template>
     </Panel>
     
   `,
