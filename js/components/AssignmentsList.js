@@ -34,7 +34,7 @@ export default {
         <slot></slot>
       </div>
       
-      <template v-slot:footer>
+      <template #footer>
         my footer goes here
       </template>
     </Panel>
