@@ -1,16 +1,16 @@
 import Assignments from "./Assignments.js";
+import Panel from "./Panel.js";
 
 export default {
   components: {
-    Assignments
+    Assignments,
+    Panel
   },
   template: `
-    <div>
+    <div class="grid gap-6">
       <Assignments />
       
-      <div class="bg-gray-700 p-4 border border-gray-400 rounded">
-        <h2 class="font-bold">Hello</h2>
-      </div>
+      <Panel heading="Hello World">
     </div>
   `
 }
